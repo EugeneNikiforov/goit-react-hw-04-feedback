@@ -1,0 +1,57 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    border-radius: 5px;
+    width: 450px;
+    background-color: #54549e;
+
+    // &Header {
+    //     font-size: 28px;
+    //     display: inline-block;
+    //     padding-left: 20px;
+    //     padding-top: 25px;
+    //     color: #fff;
+    // }
+
+    // &BtnList {
+    //     padding-left: 20px;
+    //     padding-top: 25px;
+    //     display: flex;
+    //     flex-direction: row;
+    // }
+
+    // &BtnGood {
+    //     display: block;
+    // }
+
+    // &BtnNeutral {
+    //     display: block;
+    //     margin-left: 15px;
+    // }
+
+    // &BtnEvil {
+    //     display: block;
+    //     margin-left: 15px;
+    // }
+
+    &List {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    &Digit {
+        font-size: 20px;
+        color: #fff;
+        
+        &:not(:last-child) {
+            padding-bottom: 10px;
+        }
+    }
+}

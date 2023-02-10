@@ -1,0 +1,46 @@
+.counterBtnGood {
+    display: block;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    &:active {
+        background-color: rgb(204, 1, 1);
+        transition: background 0.15s;
+    }
+
+    &:nth-child(2):active {
+        background-color: rgb(189, 189, 0);
+        transition: background 0.15s;
+    }
+
+    &:nth-child(3):active {
+        background-color: rgb(0, 100, 0);
+        transition: background 0.15s;
+    }
+}
+
+// .counterBtnNeutral {
+//     display: block;
+//     margin-left: 15px;
+// }
+
+// .counterBtnEvil {
+//     display: block;
+//     margin-left: 15px;
+// }
+.counterBtnList {
+    padding-left: 20px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
