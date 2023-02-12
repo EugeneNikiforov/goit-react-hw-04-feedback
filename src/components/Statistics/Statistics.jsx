@@ -11,20 +11,27 @@ const Statistics = () => {
   // const [Total, setTotal] = React.useState(0);
   // const [Positive, setPositive] = React.useState(0);
   
-  const handleIncrement = (e) => {
-    if (e === 'good') {
-      setGood((state) => state + 1);
-    } else if (e === 'neutral') {
-      setNeutral((state) => state + 1);
-    } else if (e === 'bad') {
-      setBad((state) => state + 1);
-    } else {
-      alert("Something happens (-_-)");
-    }
-  };
-  // countTotalFeedback = () => {
-  //   return this.state.good + this.state.neutral + this.state.bad;
+  // const handleIncrement = (e) => {
+  //   if (e === 'good') {
+  //     setGood(Good + 1);
+  //   } else if (e === 'neutral') {
+  //     setNeutral(Neutral + 1);
+  //   } else if (e === 'bad') {
+  //     setBad(Bad + 1);
+  //   } else {
+  //     alert("Something happens (-_-)");
+  //   }
   // };
+  const onClickGood = () => {
+    setGood(Good + 1);
+  };
+  const onClickNeutral = () => {
+    setNeutral(Neutral + 1);
+  };
+  const onClickBad = () => {
+    setBad(Bad + 1);
+  };
+
   const countTotalFeedback = () => {
     return (Good + Neutral + Bad);
   };
@@ -37,7 +44,7 @@ const Statistics = () => {
   return (
     <div className={styles.counter}>
       <Section title="Please leave feedback">
-        <FeedbackOptions options={['good', 'neutral', 'bad']} handleIncrement={handleIncrement} />
+        <FeedbackOptions onClickGood={onClickGood} onClickNeutral={onClickNeutral} onClickBad={onClickBad} />
       </Section>
       <Section title="Statistics">
         {countTotalFeedback() ? (
@@ -55,3 +62,5 @@ const Statistics = () => {
 };
 
 export default Statistics;
+
+/* <FeedbackOptions options={['good', 'neutral', 'bad']} handleIncrement={handleIncrement} /> */
